@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Crypto Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <p></p>
+        <form id="myForm" action="/get-crypto" method="post"> <!-- Corrected form -->
+            <label for="cryptoTicker" class="title">Enter Crypto Ticker ([ticker]-USD):</label><br>
+            <input type="text" id="cryptoTicker" name="cryptoTicker"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <% if (content) { %> 
+            <div class="ticker-info">
+                <h2>Ticker Information</h2>
+                <p><strong>Symbol:</strong> <%= content.symbol %></p>
+                <p><strong>Price (24h):</strong> $ <%= content.price_24h %></p>
+                <p><strong>Volume (24h):</strong> <%= content.volume_24h %></p>
+                <p><strong>Last Trade Price:</strong> $ <%= content.last_trade_price %></p>
+            </div>
+        <% } else if (error) { %> 
+            <p><%= error %></p>
+        <% } %> 
+
+    </div>
+
+
+</body>
+</html>

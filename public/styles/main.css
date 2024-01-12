@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto Mono';
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Added rounded corners */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Mono';
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.title {
+    text-align: center; /* Center the title */
+    font-size: 24px; /* Big font size */
+    color: #007bff; /* Color that matches the theme */
+    margin: 0 0 20px; /* Spacing for separation from the form */
+    font-weight: bold; /* Make the font bold */
+    font-family: 'Roboto Mono'; /* Optional: Change to a different font if you like */
+}
+
+.ticker-info {
+    background-color: #e7f1ff;
+    border-left: 5px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.ticker-info h2 {
+    color: #007bff;
+}
+
+.ticker-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
